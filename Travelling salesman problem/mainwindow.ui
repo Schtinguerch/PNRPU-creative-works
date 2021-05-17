@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>618</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Задача оптимизации: задача о коммивояжёре</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+background-color: #F5F5F5;
+}
+
+QPlainTextEdit, QLineEdit {
+background-color: white;
+padding: 5px;
+border: 2px solid #E2E2E2;
+border-radius: 10px;
+
+margin-bottom: 5px;
+
+color: #363636;
+font-family: &quot;cascadia mono&quot;;
+font-size: 16px;
+}
+
+QPlainTextEdit:focus, QLineEdit:focus, QPushButton:focus {
+border: 2px solid #64A0C2;
+}
+
+QPlainTextEdit:hover, QLineEdit:hover, QPushButton:hover {
+border: 2px solid #CEA8BF;
+}
+
+QPushButton:hover{ 
+background-color: #CEA8BF; 
+}
+
+QPushButton {
+background-color: #F0F0F0;
+color: #363636;
+
+height: 48px;
+
+font-family: &quot;bahnschrift semibold&quot;;
+font-size: 14px;
+
+border: 2px solid #DADADA;
+border-radius: 10px;
+padding: 5px;
+
+margin-bottom: 4px;
+}
+
+QPushButton:pressed {
+background-color: #64A0C2;
+border: 2px solid #64A0C2;
+}
+
+QLabel {
+color: #424242;
+font-family: &quot;bahnschrift semibold&quot;;
+font-size: 14px;
+margin-bottom: 5px;
+}
+
+QMenuBar {
+background-color: white;
+color: #363636;
+
+font-family: &quot;bahnschrift semibold&quot;;
+font-size: 14px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item>
+           <widget class="QPlainTextEdit" name="plainTextEdit_2">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(0, 0, 0, 0);
+border: 0px;</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QPushButton" name="AddVertexPushButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Добавить вершину</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QPushButton" name="EditVertexPushButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Редактировать вершину</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QPushButton" name="DeleteVertexPushButton">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Удалить вершину</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="GotRouteLabel">
+            <property name="styleSheet">
+             <string notr="true">margin-top: 20px;</string>
+            </property>
+            <property name="text">
+             <string>Полученный маршрут</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="GotRouteLineEdit">
+            <property name="styleSheet">
+             <string notr="true">margin-bottom: 0px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="GotRouteLengthLabel">
+            <property name="styleSheet">
+             <string notr="true">margin-top: 10px;</string>
+            </property>
+            <property name="text">
+             <string>Итоговая длина маршрута</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="GotRouteLengthLineEdit">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="plainTextEdit">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(0, 0, 0, 0);
+border: 0px;</string>
+            </property>
+            <property name="backgroundVisible">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="GraphicsLayout"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <action name="OpenFileAction">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+   <property name="toolTip">
+    <string>Открыть файл с матрицей смежности графа</string>
+   </property>
+  </action>
+  <action name="SaveFileAction">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить текущую матрицу смежности в файл</string>
+   </property>
+  </action>
+  <action name="SaveFileAsAction">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить текущую матрицу смежности в новом файле</string>
+   </property>
+  </action>
+  <action name="QuitAppAction">
+   <property name="text">
+    <string>Выход из приложения</string>
+   </property>
+   <property name="toolTip">
+    <string>Завершить работу приложения, выход из программы</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
