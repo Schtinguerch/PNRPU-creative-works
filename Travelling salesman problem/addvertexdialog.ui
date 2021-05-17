@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddVertexDialog</class>
+ <widget class="QDialog" name="AddVertexDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>311</width>
+    <height>321</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Добавить вершину</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+background-color: #F5F5F5;
+}
+
+QPlainTextEdit, QLineEdit {
+background-color: white;
+padding: 5px;
+border: 2px solid #E2E2E2;
+border-radius: 10px;
+
+margin-bottom: 5px;
+
+color: #363636;
+font-family: &quot;cascadia mono&quot;;
+font-size: 16px;
+}
+
+QPlainTextEdit:focus, QLineEdit:focus, QPushButton:focus {
+border: 2px solid #64A0C2;
+}
+
+QPlainTextEdit:hover, QLineEdit:hover, QPushButton:hover {
+border: 2px solid #CEA8BF;
+}
+
+QPushButton:hover{ 
+background-color: #CEA8BF; 
+}
+
+QPushButton {
+background-color: #F0F0F0;
+color: #363636;
+
+font-family: &quot;bahnschrift semibold&quot;;
+font-size: 14px;
+
+border: 2px solid #DADADA;
+border-radius: 10px;
+padding: 5px;
+
+margin-bottom: 4px;
+}
+
+QPushButton:pressed {
+background-color: #64A0C2;
+border: 2px solid #64A0C2;
+}
+
+QLabel {
+color: #424242;
+font-family: &quot;bahnschrift semibold&quot;;
+font-size: 14px;
+margin-bottom: 5px;
+}
+
+QMenuBar {
+background-color: white;
+color: #363636;
+
+font-family: &quot;bahnschrift semibold&quot;;
+font-size: 14px;
+}</string>
+  </property>
+  <widget class="QPlainTextEdit" name="VertexRefsPlainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>271</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>a: b, c или a: d         где, a - № вершины, с которой строится связь,     b - длина ребра в направлении к вершине a,    c - длина ребра в направлении от вершины а,      d - длина двунаправленного ребра.</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Связи с другими вершинами</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="CancelPushButton">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>270</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Отмена</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ApplyPushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>270</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Применить</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
